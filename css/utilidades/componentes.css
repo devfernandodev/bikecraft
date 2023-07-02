@@ -1,4 +1,4 @@
-.container{
+.container {
   box-sizing: border-box;
   max-width: 1200px;
   padding-left: 20px;
@@ -6,47 +6,104 @@
   margin-left: auto;
   margin-right: auto;
 }
-.botao{
-  padding: 16px 32px;
-  background: linear-gradient(to top, #3498db, #8e44ad);
-  display: inline-block;
-  border-radius: 4px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0.1);
-  text-transform: uppercase;
-  color: #0e001f;
-  line-height: 1.33;
-  font-size: 18px;
 
-  font-family: "poppins";
-  font-weight: 600;
-}
-.botao:hover {
-  background: linear-gradient(to top, #2979ba, #7d389a);
-}
-.link{
+.botao {
   display: inline-block;
-  color: var(--cor-p6);
-  font: 500 1.5rem/1.5 "Poppins", sans-serif;
+  padding: 16px 32px;
+  background: linear-gradient(#b200ff, #a30be4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   text-transform: uppercase;
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+  color: var(--cor-p5);
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
 }
-.link::after{
+
+.botao:hover {
+  background: linear-gradient(#9933ff, #8800cc);
+}
+
+
+.botao.secundario {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+
+.botao.secundario:hover {
+  background: var(--cor-9);
+}
+
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: transform 0.2s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .botao {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+.link {
+  display: inline-block;
+  font: 500 1.5rem/1.5 "Poppins", sans-serif;
+  color: var(--cor-p1);
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.link::after {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
- background-color: currentColor;
+  background: currentColor;
+  position: absolute;
+  margin-top: 4px;
 }
-.link:hover{
+
+.link:hover {
   color: var(--cor-0);
 }
 
+.titulo {
+  padding: 60px 0;
+  background: var(--cor-11);
+}
 
+.titulo div {
+  background: url("../../img/dec/top-right.svg") no-repeat top right 20px;
+}
 
+.titulo p {
+  margin-bottom: 4px;
+}
 
-
-@media (max-width: 600px) {
-  .botao{
-    padding: 12px 16px;
-    font-size: 16px;
+@media (max-width: 800px) {
+  .titulo p {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+  .titulo {
+    padding: 40px 0;
   }
 }
