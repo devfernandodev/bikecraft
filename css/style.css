@@ -1,85 +1,26 @@
-body{
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
+@import url(./global/global.css);
+@import url(./global/header.css);
 
+/* introdução */
+@import url(./home/introducao.css);
 
-.header-bg{
-    background-color: #000000;
-}
-.header{
-    display: flex;
-    flex-wrap: wrap; /*toda vez que meu menu chegar perto da marca ele vai quebrar para a linha de baixo*/
-    gap: 20px; /*esse gap eu coloquei para não deixa grudar muito antes de quebrar para a linha de baixo*/
-    justify-content: space-between; /*espaçamento entre a marca e os links*/
-    align-items: center; /* alinhando a marca com os links */
-    padding: 20px; /*padding geral para desgrudar da margem*/
-    box-sizing: border-box;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.header-menu{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-.header-menu a{
-    color: #ffffff;
-    display: inline-block;
-    padding: 16px 0px; /*aumentando a area de contato*/
-    font-size: 18px;
-    position: relative;
-}
-.header-menu a::after{
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0%;
-    background-color: #ffffff;
-    margin-top: 4px;
-    transition: 0.4s;
-    position: absolute;
+/* utilidades */
+@import url(./utilidades/componentes.css);
 
-}
-.header-menu a:hover::after{
-    width: 100%;
-}
+/* tipografia */
+@import url(./utilidades/tipografia.css);
 
+/* cores */
+@import url(./utilidades/cores.css);
 
-/*               MEDIA QUERY        */
+/*Biciletas lista*/
+@import url(./bicicletas/bicicletas-lista.css);
 
-@media(max-width:800px){
-    .header-menu{
-        gap: 20px;
-    }
-    .header-menu a{
-        background-color: #111111;
-        padding: 14px 16px;
-        border-radius: 4px;
-    }
-    .header-menu a:hover{
-        background-color: #2e2e2e;
-    }
-    .header a:after{
-        display: none;
-    }
-}
+/*Tecnologia*/
+@import url(./home/tecnologia.css);
 
-@media(max-width:600px){
-    .header-menu{
-        gap: 12px;
-    }
-    .header-menu a{
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-}
+/* parceiros */
+@import url(./home/parceiros.css);
+
+/* depoimento */
+@import url(./home/depoimento.css);

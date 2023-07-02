@@ -1,0 +1,72 @@
+.header-bg {
+    background-color: var(--cor-12);
+  }
+  .header {
+    display: flex;
+    flex-wrap: wrap; /*toda vez que meu menu chegar perto da marca ele vai quebrar para a linha de baixo*/
+    gap: 20px; /*esse gap eu coloquei para não deixa grudar muito antes de quebrar para a linha de baixo*/
+    justify-content: space-between; /*espaçamento entre a marca e os links*/
+    align-items: center; /* alinhando a marca com os links */
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+  }
+  .header-menu {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .header img {
+    min-width: max-content;
+  }
+  .header-menu a {
+    color: var(--cor-0);
+    display: inline-block;
+    padding: 16px 0px; /*aumentando a area de contato*/
+    font-size: 18px;
+    position: relative;
+    font-family: 'poppins';
+    font-weight: 400;
+  }
+  .header-menu a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--cor-0);
+    margin-top: 4px;
+    transition: 0.4s;
+    position: absolute;
+  }
+  .header-menu a:hover::after {
+    width: 100%;
+  }
+  
+  /*               MEDIA QUERY        */
+  
+  @media (max-width: 800px){
+    .header-menu {
+      gap: 20px;
+    }
+    .header-menu a {
+      background-color:var(--cor-11);
+      padding: 14px 16px;
+      border-radius: 4px;
+    }
+    .header-menu a:hover {
+      background-color: var(--cor-10);
+    }
+    .header a:after {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .header-menu {
+      gap: 12px;
+    }
+    .header-menu a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
